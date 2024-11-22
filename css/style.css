@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variáveis substituídas diretamente */
+:root {
+  --cor-primaria: #2e7d32;
+  --cor-secundaria: #66bb6a;
+  --cor-fundo-clara: #f1f8e9;
+  --cor-texto-escuro: #1b5e20;
+  --fonte-principal: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo-clara);
+  color: var(--cor-texto-escuro);
+  line-height: 1.6;
+}
+
+.hero {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 7rem 0;
+  text-align: center;
+  background-image: url('imagem_hero.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  z-index: 1;
+  position: relative;
+}
+
+#definicao .row {
+  display: flex;
+  align-items: center;
+}
+
+#definicao img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.tipos-energia {
+  padding: 5rem 0;
+}
+
+.tipos-energia h2 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 3rem;
+}
+
+.tipos-energia .card {
+  border: none;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: white;
+}
+
+.tipos-energia .card img {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.tipos-energia .card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  background-color: #e6e6e6; /* Assumindo um escurecimento de white */
+  transition: background-color 0.3s ease;
+}
+
+.tipos-energia .card:hover img {
+  opacity: 0.9;
+}
+
+.tipos-energia .card:hover .btn {
+  background-color: var(--cor-secundaria);
+  color: #fff;
+}
+
+.tipos-energia .card:hover .card-title {
+  color: var(--cor-primaria);
+}
+
+/* Substituindo a media query para uma suposição de classificação por tamanho */
+@media (min-width: 600px) {
+  .tipos-energia .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+}
+
+.beneficios, .vantagens, .contato {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.beneficios h2, .vantagens h2, .contato h2 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 3rem;
+}
+
+.beneficios ul, .vantagens ul, .contato ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.beneficios li, .vantagens li, .contato li {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #b5eacc; /* Assumindo um clareamento da cor primária */
+  border-radius: 0.5rem;
+}
+
+button {
+  background-color: var(--cor-primaria);
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #4ba956; /* Assumindo um clareamento da cor primária */
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: var(--cor-texto-escuro);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #8fd19e; /* Assumindo um clareamento da cor secundária */
+}
