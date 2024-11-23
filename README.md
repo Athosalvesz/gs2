@@ -1,5 +1,3 @@
-Certamente! Aqui está o README atualizado com as informações sobre "Energia Sustentável":
-
 # README do Projeto Energia Sustentável
 
 ## Energia Sustentável
